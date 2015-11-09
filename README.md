@@ -54,8 +54,7 @@ public class Person{
 `	List< Person > = Orm.findAllEq(Person.class, "name", "豆豆电话本");`
 
 ```
-List< Person > = Orm.select(Person.class)
-	.whereGe("age", 5).asc("name).limit(20).findAll()
+List< Person > = Orm.select(Person.class).whereGe("age", 5).asc("name).limit(20).findAll()
 ```
 4. 删除
 `	Orm.deletePk(Person.class, 1);`
