@@ -46,15 +46,20 @@ public class Person{
 ```
 
 `	Person person = Orm.findOneEq(Person.class, "name", "豆豆电话本");`
+
 `	Person person = Orm.findOne(Person.class, "age=?", 5);`
+
 `	List< Person > = Orm.findAll(Person.class) ;`
+
 `	List< Person > = Orm.findAllEq(Person.class, "name", "豆豆电话本");`
+
 ```
 List< Person > = Orm.select(Person.class)
 	.whereGe("age", 5).asc("name).limit(20).findAll()
 ```
 4. 删除
 `	Orm.deletePk(Person.class, 1);`
+
 `	Orm.deleteEq(Person.class, "age", 5);`
 
 5. 变更
